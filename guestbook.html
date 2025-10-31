@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------ HEAD -------------------------------->
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Guest Book</title> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<!------------------------------ BODY -------------------------------->
+
+<!-- Background Image -->
+<body>
+
+    <!-- Cursor Assignment -->
+    <div class="cursor"></div>
+
+    <!-- Header Section -->
+    <header id="header-container">
+        <!-- Header Placeholder Area-->
+         <img src="Images/hand_trimmed.gif" class="hand">
+    </header>
+    
+    <!-- Main Container-->
+        <nav>
+            <div id="menu-style">
+                <!-- Menu Button Navigation Area-->
+                <button class="menu-buttons" onclick="document.location='home.html'">Home</button>
+                <button class="menu-buttons" onclick="document.location='personal.html'">Personal</button>
+                <button class="menu-buttons" onclick="document.location='professional.html'">Professional</button>
+                <button class="menu-buttons" onclick="document.location='guestbook.html'">Guest Book</button>
+                <button class="menu-buttons" onclick="document.location='contact.html'">Contact Me</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Section-->
+        <main>
+
+            <!-- Title Section -->
+            <div class="standalone-title">
+                <img src="Images/loriiEXCITE_112x112.png" class="emote">
+                <h1 class="title-text">Guest Book</h1>
+            </div>
+
+            <br>
+
+            <div class="extra-text">
+                <h2>Have Something to Say?</h2>
+                <p>Feel free to leave me a message below! You can give feedback on my website, offer ideas, or anything else that's reasonable ^.^</p>
+            </div>
+
+            <!--Guestbook Area -->
+            <div id="guestbook-area">
+                
+                <!-- Comments Display Area -->
+                <div id="comments-display">
+                    <div class="no-comments">No comments yet. Be the first!</div>
+                </div>
+                <!-- Visitor Input Area -->
+                <div id="visitor-input-area">
+                    <h3>Add a Comment:</h3>
+                    <form id="comment-form">
+                        <label for="userName">Name:</label><br>
+                        <input type="text" id="userName" name="userName" required><br><br>
+                        <label for="user-comment">Comment:</label><br>
+                        <textarea id="user-comment" name="user-comment" rows="8" style="width:100%;" required></textarea><br><br>
+                        <input type="submit" value="Submit Comment" class="submit-button">
+                    </form>
+                </div>
+
+            </div> 
+
+
+        </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div id="footer-container">
+            <span>This website was designed and made by yours truly, Lorien Gugich. All rights reserved.</span><br>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="guestbook.js"></script>
+</body>
+</html>

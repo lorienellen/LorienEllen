@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------ HEAD -------------------------------->
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Personal</title> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<!------------------------------ BODY -------------------------------->
+
+<!-- Background Image -->
+<body>
+
+    <!-- Cursor Assignment -->
+    <div class="cursor"></div>
+
+    <!-- Header Section -->
+    <header id="header-container">
+        <!-- Header Placeholder Area-->
+         <img src="Images/hand_trimmed.gif" class="hand">
+    </header>
+    
+    <!-- Main Container-->
+        <nav>
+            <div id="menu-style">
+                <!-- Menu Button Navigation Area-->
+                <button class="menu-buttons" onclick="document.location='home.html'">Home</button>
+                <button class="menu-buttons" onclick="document.location='personal.html'">Personal</button>
+                <button class="menu-buttons" onclick="document.location='professional.html'">Professional</button>
+                <button class="menu-buttons" onclick="document.location='guestbook.html'">Guest Book</button>
+                <button class="menu-buttons" onclick="document.location='contact.html'">Contact Me</button>
+            </div>
+        </nav>
+
+        <!-- Main Content Section-->
+        <main>
+
+            <!-- Title Section -->
+            <div class="standalone-title">
+                <img src="Images/loriiLOVE_112x112.png" class="emote">
+                <h1 class="title-text">Personal</h1>
+            </div>
+
+            <br>
+
+            <div class="extra-text">
+                <h1>About Me</h1>
+                <h3>Creative, Analytical, Courageous, Goal Oriented, ADHD. Personality Type: INFJ</h3>
+                <p>My name is Lorien Gugich. I'm a free spirited 33 year old who is passionate about living life authentically, always striving for what's next.
+                    I advocate for inclusivity, while creating more awareness around mental health and neurodiversity. My personality type is INFJ.<br><br>
+                    I live in Hawke's Bay, New Zealand with my child and our beloved pets. Some of which are our English Bulldog "Chorizo", our Axolotl "Sunny", and our Dove "Marshmallow".
+                    Currently I am studying a Bachelor of Computing Systems to upskill in my career, which is the reason for this website (it's part of my course!).<br><br>
+                </p>
+            </div>
+
+            <div class="row">
+                <!-- First Slider -->
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img src="Images/Lorien/Mugshot.png" alt="Lorien">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="extra-text">
+                <h1>Art</h1>
+                <p>I have always had an artistic and creative flair, yet it wasn't until the last 4 years where I became more intentional with my desire to hone my skills.
+                    I'm still trying to find my art style! Here are some of my recent works, finished and unfinished!
+                </p>
+            </div>
+
+            <!-- Second Slider -->
+            <div class="row slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img src="Images/Art/NintendoDS.jfif" alt="Nintendo DS Art">
+                        <img src="Images/Art/Chorizo.jpeg" alt="Chorizo Art">
+                        <img src="Images/Dog1.PNG" alt="Dog portrait">
+                        <img src="Images/Dog2.PNG" alt="Dog portrait">
+                        <img src="Images/Cat.PNG" alt="Sketch">
+                        <img src="Images/Sketch2.PNG" alt="Sketch">
+                    </div>
+                    <button class="nav-btn prev">❮</button>
+                    <button class="nav-btn next">❯</button>
+                </div>
+            </div>
+            
+            <div class="extra-text">
+                <h1>Guitar</h1>
+                <p>On New Years Day 2024 I decided that I would finally pick up Guitar, after having always wanted to try it. I knew that I needed to pick a guitar that would make me <i>want</i> to keep playing,
+                    so I chose a Fender Player Stratocaster in Buttercream (yellow)!<br><br>
+                    I started self-directed lessons through a paid mobile application, and stuck at it! I learned the chords fairly quickly, and my confidence grew. I began to share posts of my
+                    progress on social media, including video's of me singing while playing! I wanted to further improve, so I put some feelers out there to join a local jam group. Shortly after
+                    that, I was invited to perform at The Paisley Stage in Napier. I had a 15 minute slot where I sang and played three songs infront of a live audience. It was certainly a night to remember,
+                    and I hope to do it again.<br><br>
+                    I have a deep appreciation for how music has shaped my life, and continues to.
+                </p>
+            </div>
+
+            <!-- Third Slider -->
+            <div class="row slider-container">
+                <div class="slider-wrapper">
+                    <div class="slider">
+                        <img src="Images/Lorien/LorienPerforming.jfif" alt="Lorien Performing">
+                        <img src="Images/Beach.jfif" alt="Beach Setup">
+                        <img src="Images/Guitar2.jfif" alt="Guitar Two">
+                        <img src="Images/Guitar3.jfif" alt="Guitar Three">
+                        <img src="Images/HotelGuitar.jfif" alt="Hotel Guitar">
+                    </div>
+                    <button class="nav-btn prev">❮</button>
+                    <button class="nav-btn next">❯</button>
+                </div>
+            </div>
+
+            <!-- Overlay for enlarged image -->
+            <div class="overlay" id="overlay">
+                <button class="close-btn" onclick="closeOverlay()">×</button>
+                <img id="overlayImg" src="" alt="Enlarged image">
+            </div>
+
+        </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div id="footer-container">
+            <span>This website was designed and made by yours truly, Lorien Gugich. All rights reserved.</span><br>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="javascript.js"></script>
+</body>
+</html>

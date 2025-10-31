@@ -1,0 +1,583 @@
+/* Small Screens (Screen Size Default) */
+/*--------------------------------------------------*/
+
+/* Body */
+body {
+    box-sizing: border-box;
+    margin: 0;
+    cursor: none;
+    background-image: url(Images/Background.PNG); /* My background image */
+    background-repeat: repeat; /* Repeats my background image */
+    background-size: 40%;
+    background-blend-mode: overlay;
+    background-color: rgba(255, 203, 124, 0.301); /* To fill any gaps in the repeated background */
+    font-family: Lucida Bright, Georgia, serif;
+    font-style: normal;
+}
+
+/* Custom Cursor Assignment */
+.cursor {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    background-image: url(Images/glove.PNG); /* My custom cursor image */
+    background-size: cover;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Removes the default cursor from the whole website */
+* {
+    cursor: none;
+}
+
+/* Header */
+header {
+    min-height: 15vh;
+}
+
+/* Header Image */
+img.hand {
+    width: 85px;
+}
+
+/* Header Container */
+#header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+/* Top Menu Style (including Home Page Date/Time Bar) */
+#menu-style {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+    border: 1px rgb(255, 255, 255);
+    border-style: solid;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    /* Contrasting tint to the frosted glass effect */
+    background-color: rgba(0, 0, 0, 0.716);
+    backdrop-filter: blur(5px); /* 1px more blur for the darker colour */
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Top Menu Buttons */
+.menu-buttons {
+    position: relative; /* Keeps buttons the same height */
+    margin: 8px;
+    border: 1px rgba(255, 255, 255, 0.644);
+    border-bottom-style: inset;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-family: Lucida Bright, Georgia, serif;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: bold;
+    transition: transform 1s;
+}
+
+/* Adds the hover effect to the top menu buttons */
+.menu-buttons:hover {
+    cursor: none;
+    transform: scale(1.1); /* Zooms in 5% */
+    transform-style: preserve-3d;
+    transition: transform 1s; /* The size will be 5% bigger - taking 0.2s to complete this transform */
+}
+
+/* Main Content Area */
+main {
+    min-height: 75vh;
+}
+
+/* Title Container */
+#title-container {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border: 1px rgb(255, 255, 255);
+    border-style: solid;
+    /* Nice frosted glass look */
+    background-color: rgba(255, 255, 255, 0.507);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.standalone-title {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border: 1px rgb(255, 255, 255);
+    border-style: solid;
+    /* Nice frosted glass look */
+    background-color: rgba(255, 255, 255, 0.507);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+/* Title Text Style */
+.title-text {
+    font-size: 2.5em;
+    margin-left: 25px;
+    margin-right: 10px;
+    color: rgb(0, 0, 0, 0.716);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Title Image */
+.emote {
+    max-width: 100px;
+    float: left;
+    margin-left: 20px;
+}
+
+/* Title Text Container */
+#text-container {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
+    border: 1px rgb(255, 255, 255);
+    border-style: solid;
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+    font-weight: normal;
+    padding: 20px;
+    text-align: center;
+    /* Contrasting tint to the frosted glass effect */
+    background-color: rgba(0, 0, 0, 0.716);
+    backdrop-filter: blur(5px); /* 1px more blur for the darker colour */
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Image and/or Video Row/Slider Details */
+.row {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+    padding: 20px;
+    border: 1px rgb(255, 255, 255);
+    border-style: solid;
+    /* Nice frosted glass look */
+    background-color: rgba(255, 255, 255, 0.507);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+    object-fit: contain;
+    display: block;
+}
+
+.slider video {
+    width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+    object-fit: contain;
+    display: block;
+    cursor: none;
+}
+
+/* Arrow Buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    cursor: none;
+    font-size: 16px;
+}
+
+/* Hover over Button Colour Change */
+.nav-btn:hover {
+    background: #f0f0f0;
+}
+
+/* Left Arrow Button Movement */
+.prev {
+    left: 5px;
+}
+
+/* Right Arrow Button */
+.next {
+    right: 5px;
+}
+
+/* Overlay Details for Enlargement of Clicked Images */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.active {
+    display: flex;
+}
+
+.overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    background: #f0f0f0;
+}
+
+/* Extra Text Container (for pages other than home, contact,) */
+.extra-text {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
+    border: 1px rgb(255, 255, 255);
+    border-style: solid;
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+    font-weight: normal;
+    padding: 20px;
+    text-align: left;
+    /* Contrasting tint to the frosted glass effect */
+    background-color: rgba(0, 0, 0, 0.716);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Navigational Button Container */
+#nav-container {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigational Buttons */
+.nav-buttons { 
+    position: relative; /* Keeps buttons the same height */
+    display: flex;
+    margin: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+    padding-left: 30px;
+    border: 1px rgb(255, 255, 255);
+    border-style: solid;
+    background-color: rgba(255, 255, 255, 0.507);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    color: rgb(0, 0, 0, 0.716);
+    font-family: Lucida Bright, Georgia, serif;
+    font-style: normal;
+    font-size: 2.5em;
+    font-weight: bold;
+    transition: transform 1s;
+}
+
+/* Adds the hover effect to the nav buttons */
+.nav-buttons:hover {
+    cursor: none;
+    transform: scale(1.1);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+/* Removes the underline of hyperlinks */
+.underline-remover {
+    text-decoration: none;
+}
+
+.slider img {
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.slider video {
+    width: 100%;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+/* Guest book specific styling */
+#guestbook-area {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    border: 1px rgb(255, 255, 255);
+    border-style: solid;
+    /* Nice frosted glass look */
+    background-color: rgba(255, 255, 255, 0.507);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+#comments-display {
+    margin: 20px 0;
+    width: 100%;
+}
+
+#user-comment {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#visitor-input-area {
+    margin: 20px;
+    width: 100%;
+}
+
+#comment-form {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Visitor Input Container Details */
+.comment {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.comment-name {
+    word-wrap: break-word; /* these help prevent overflow in the display area */
+    overflow-wrap: break-word; /* these help prevent overflow in the display area */
+    word-break: break-word; /* these help prevent overflow in the display area */
+    max-width: 100%; /* these help prevent overflow in the display area */
+    overflow: hidden; /* these help prevent overflow in the display area */
+    text-overflow: ellipsis; /* these help prevent overflow in the display area */
+    font-weight: bold;
+    color: rgb(0, 0, 0, 0.716);
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.comment-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color:rgb(0, 0, 0, 0.716);
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+.comment-date {
+    color: #666;
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+.no-comments {
+    color: #666;
+    font-style: italic;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.submit-button {
+    font-family: Lucida Bright, Georgia, serif;
+    font-style: normal;
+}
+
+/* Footer */
+footer {
+    min-height: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 3vh;
+}
+
+#footer-container {
+    background-color: rgba(0, 0, 0, 0.716);
+    border: 1px rgb(255, 255, 255);
+    border-style: solid;
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/*----------------------------------------------------------*/
+/*All the below CSS styles will be applied for MEDIUM SCREENS */
+@media screen and (min-width: 768px) {
+
+header {
+    min-height: 18vh;
+}
+
+#menu-style {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+#title-container {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.standalone-title {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+#text-container {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.extra-text {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.row {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.slider img {
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+}
+
+.slider video {
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+}
+
+#guestbook-area {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+footer {
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+}
+
+/*----------------------------------------------------------*/
+/*All the below CSS styles will be applied for LARGE SCREENS */
+@media screen and (min-width: 1440px) {
+
+header {
+    min-height: 18vh;
+}
+
+#menu-style {
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+#title-container {
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+.standalone-title {
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+#text-container {
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+.extra-text {
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+.row {
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+#guestbook-area {
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+footer {
+    margin-left: 25vw;
+    margin-right: 25vw;
+}
+
+}
